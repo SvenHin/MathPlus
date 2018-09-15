@@ -5,7 +5,7 @@
         <item>Tysk</item>
     </string-array>
     <string-array name="language_values">
-        <item>123</item>
-        <item>123</item>
+        <item>Norsk</item>
+        <item>Deutsch</item>
     </string-array>
 </resources>

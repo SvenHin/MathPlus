@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,7 +29,6 @@ public class Main extends Activity {
         Toolbar mainToolbar = (Toolbar)findViewById(R.id.main_toolbar);
         setActionBar(mainToolbar);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-
         playBtn = (Button) findViewById(R.id.playBtn);
         statBtn = (Button) findViewById(R.id.statBtn);
 
@@ -48,6 +48,8 @@ public class Main extends Activity {
 
     }
 
+
+
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_toolbar, menu);
@@ -63,17 +65,6 @@ public class Main extends Activity {
                 return super.onOptionsItemSelected(item);
         }
         return true;
-    }
-
-    public void tysk(View v) {
-        String language="de";
-        Context context=getApplicationContext();
-        Locale locale= new Locale(language);
-        Locale.setDefault(locale);
-        Resources res = context.getResources();
-        Configuration config= new Configuration(res.getConfiguration());
-        config.locale= locale;
-        res.updateConfiguration(config, res.getDisplayMetrics());recreate();
     }
 
 

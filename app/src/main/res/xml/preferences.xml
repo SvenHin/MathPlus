@@ -2,9 +2,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <ListPreference
         android:defaultValue="Norsk"
-        android:key="changeLangBtn"
+        android:key="changeLangPref"
         android:entries="@array/language_entires"
         android:entryValues="@array/language_values"
-        android:summary="Bytt språk"
+        android:summary="%s"
         android:title="Språk" />
 </PreferenceScreen>
