@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Math One</string>
+    <string name="play_btn">Start spill</string>
+    <string name="stat_btn">Se statistikk</string>
+    <string name="pref_btn">Instillinger</string>
+    <string name="changeLanguage_btn">Språk</string>
+    <string name="cogwheel">Cogwheel</string>
+</resources>
