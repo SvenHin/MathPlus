@@ -9,8 +9,10 @@ package com.svenhaakon.s315318s305204mappe1;
 
 public final class R {
   public static final class array {
-    public static final int language_entires=0x7f010000;
-    public static final int language_values=0x7f010001;
+    public static final int answr_array=0x7f010000;
+    public static final int eq_array=0x7f010001;
+    public static final int language_entires=0x7f010002;
+    public static final int language_values=0x7f010003;
   }
   public static final class attr {
     /**
@@ -553,7 +555,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -569,37 +571,43 @@ public final class R {
   public static final class drawable {
     public static final int ic_launcher_background=0x7f040001;
     public static final int ic_launcher_foreground=0x7f040002;
-    public static final int play=0x7f040003;
-    public static final int play50=0x7f040004;
+    public static final int okbtn50=0x7f040003;
+    public static final int play=0x7f040004;
+    public static final int play50=0x7f040005;
   }
   public static final class id {
-    public static final int barrier=0x7f050000;
-    public static final int bottom=0x7f050001;
-    public static final int button=0x7f050002;
-    public static final int chains=0x7f050003;
-    public static final int dimensions=0x7f050004;
-    public static final int direct=0x7f050005;
-    public static final int end=0x7f050006;
-    public static final int gone=0x7f050007;
-    public static final int groups=0x7f050008;
-    public static final int invisible=0x7f050009;
-    public static final int left=0x7f05000a;
-    public static final int main_toolbar=0x7f05000b;
-    public static final int none=0x7f05000c;
-    public static final int packed=0x7f05000d;
-    public static final int parent=0x7f05000e;
-    public static final int percent=0x7f05000f;
-    public static final int playBtn=0x7f050010;
-    public static final int prefBtn=0x7f050011;
-    public static final int right=0x7f050012;
-    public static final int spread=0x7f050013;
-    public static final int spread_inside=0x7f050014;
-    public static final int standard=0x7f050015;
-    public static final int start=0x7f050016;
-    public static final int statBtn=0x7f050017;
-    public static final int textView=0x7f050018;
-    public static final int top=0x7f050019;
-    public static final int wrap=0x7f05001a;
+    public static final int EqDisplayBox=0x7f050000;
+    public static final int answrbtn=0x7f050001;
+    public static final int barrier=0x7f050002;
+    public static final int bottom=0x7f050003;
+    public static final int button=0x7f050004;
+    public static final int chains=0x7f050005;
+    public static final int content=0x7f050006;
+    public static final int dimensions=0x7f050007;
+    public static final int direct=0x7f050008;
+    public static final int end=0x7f050009;
+    public static final int eqInputBox=0x7f05000a;
+    public static final int gone=0x7f05000b;
+    public static final int groups=0x7f05000c;
+    public static final int invisible=0x7f05000d;
+    public static final int left=0x7f05000e;
+    public static final int main_toolbar=0x7f05000f;
+    public static final int none=0x7f050010;
+    public static final int packed=0x7f050011;
+    public static final int parent=0x7f050012;
+    public static final int percent=0x7f050013;
+    public static final int playBtn=0x7f050014;
+    public static final int prefBtn=0x7f050015;
+    public static final int right=0x7f050016;
+    public static final int settings_toolbar=0x7f050017;
+    public static final int spread=0x7f050018;
+    public static final int spread_inside=0x7f050019;
+    public static final int standard=0x7f05001a;
+    public static final int start=0x7f05001b;
+    public static final int statBtn=0x7f05001c;
+    public static final int textView=0x7f05001d;
+    public static final int top=0x7f05001e;
+    public static final int wrap=0x7f05001f;
   }
   public static final class layout {
     public static final int activity_main=0x7f060000;
@@ -615,12 +623,14 @@ public final class R {
     public static final int ic_launcher_round=0x7f080001;
   }
   public static final class string {
-    public static final int app_name=0x7f090000;
-    public static final int changeLanguage_btn=0x7f090001;
-    public static final int cogwheel=0x7f090002;
-    public static final int play_btn=0x7f090003;
-    public static final int pref_btn=0x7f090004;
-    public static final int stat_btn=0x7f090005;
+    public static final int answr_btn=0x7f090000;
+    public static final int app_name=0x7f090001;
+    public static final int changeLanguage_btn=0x7f090002;
+    public static final int cogwheel=0x7f090003;
+    public static final int play_btn=0x7f090004;
+    public static final int pref_btn=0x7f090005;
+    public static final int pref_title=0x7f090006;
+    public static final int stat_btn=0x7f090007;
   }
   public static final class style {
     public static final int AppTheme=0x7f0a0000;
@@ -1635,7 +1645,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

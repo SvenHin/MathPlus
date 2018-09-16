@@ -5,5 +5,6 @@
     <string name="pref_btn">Instillinger</string>
     <string name="changeLanguage_btn">Språk</string>
     <string name="cogwheel">Cogwheel</string>
+    <string name="pref_title">Instillinger</string>
     <string name="answr_btn">Svar</string>
 </resources>
