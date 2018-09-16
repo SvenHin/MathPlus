@@ -1,38 +1,38 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\build\\intermediates\\res\\merged\\debug\\values-de_values-de.arsc.flat",
+            "outputFile": "C:\\Users\\hhesk\\AndroidStudioProjects\\s315318s305204mappe1\\app\\build\\intermediates\\res\\merged\\debug\\values-de_values-de.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\s315318s305204mappe1\\app\\src\\main\\res\\values-de\\strings.xml",
                     "from": {
-                        "startLines": "1,5,6,2,4,3",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "17,224,280,65,171,117",
-                        "endColumns": "46,54,45,50,51,52",
-                        "endOffsets": "59,274,321,111,218,165"
+                        "startLines": "-1,-1,-1,-1,-1,7,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,4,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,327,-1",
+                        "endColumns": "-1,-1,-1,-1,-1,54,-1",
+                        "endOffsets": "-1,-1,-1,-1,-1,377,-1"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,102,157,203,254,306",
-                        "endColumns": "46,54,45,50,51,52",
-                        "endOffsets": "97,152,198,249,301,354"
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,102,157,203,254,306,361",
+                        "endColumns": "46,54,45,50,51,54,52",
+                        "endOffsets": "97,152,198,249,301,356,409"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "outputFile": "C:\\Users\\hhesk\\AndroidStudioProjects\\s315318s305204mappe1\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\s315318s305204mappe1\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "8,1,5,6,2,4,7,3",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "371,17,217,271,64,166,318,114",
+                        "startOffsets": "363,16,212,265,62,162,311,111",
                         "endColumns": "42,45,52,45,48,49,51,50",
-                        "endOffsets": "409,58,265,312,108,211,365,160"
+                        "endOffsets": "401,57,260,306,106,207,358,157"
                     },
                     "to": {
                         "startLines": "156,157,158,159,160,161,162,163",
@@ -40,6 +40,44 @@
                         "startOffsets": "12630,12673,12719,12772,12818,12867,12917,12969",
                         "endColumns": "42,45,52,45,48,49,51,50",
                         "endOffsets": "12668,12714,12767,12813,12862,12912,12964,13015"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\s315318s305204mappe1\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "189"
+                    },
+                    "to": {
+                        "startLines": "164",
+                        "startColumns": "4",
+                        "startOffsets": "13020",
+                        "endLines": "166",
+                        "endColumns": "12",
+                        "endOffsets": "13150"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\s315318s305204mappe1\\app\\src\\main\\res\\values\\arrays.xml",
+                    "from": {
+                        "startLines": "17,10,2,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "486,299,57,177",
+                        "endLines": "23,16,5,9",
+                        "endColumns": "19,19,19,19",
+                        "endOffsets": "660,480,171,293"
+                    },
+                    "to": {
+                        "startLines": "2,9,16,20",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,228,408,524",
+                        "endLines": "8,15,19,23",
+                        "endColumns": "19,19,19,19",
+                        "endOffsets": "223,403,519,637"
                     }
                 },
                 {
@@ -62,26 +100,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "189"
-                    },
-                    "to": {
-                        "startLines": "164",
-                        "startColumns": "4",
-                        "startOffsets": "13020",
-                        "endLines": "166",
-                        "endColumns": "12",
-                        "endOffsets": "13150"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\s315318s305204mappe1\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
@@ -95,25 +114,6 @@
                         "startOffsets": "6406,6452,6499",
                         "endColumns": "45,46,50",
                         "endOffsets": "6447,6494,6545"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\src\\main\\res\\values\\arrays.xml",
-                    "from": {
-                        "startLines": "17,10,2,6",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "486,299,57,177",
-                        "endLines": "23,16,5,9",
-                        "endColumns": "19,19,19,19",
-                        "endOffsets": "660,480,171,293"
-                    },
-                    "to": {
-                        "startLines": "2,9,16,20",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,228,408,524",
-                        "endLines": "8,15,19,23",
-                        "endColumns": "19,19,19,19",
-                        "endOffsets": "223,403,519,637"
                     }
                 }
             ]

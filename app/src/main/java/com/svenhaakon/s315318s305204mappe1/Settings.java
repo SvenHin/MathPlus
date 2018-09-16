@@ -63,9 +63,9 @@ public class Settings extends Activity {
             if (key.equals("changeLangPref")) {
                 Preference pref = findPreference(key);
                 pref.setSummary(sharedPreferences.getString(key, ""));
-                if(sharedPreferences.getString(key, "").equals("Tysk")){
-                    updateLanguage(this, "de");
-                }
+                //if(sharedPreferences.getString(key, "").equals("Tysk")){
+                    ((Settings) getActivity()).setLocale("de");
+                //}
             }
         }
 
@@ -104,9 +104,8 @@ public class Settings extends Activity {
         Configuration conf = res.getConfiguration();
         conf.locale = myLocale;
         res.updateConfiguration(conf, dm);
-        Intent refresh = new Intent(Settings.this, Settings.class);
-        startActivity(refresh);
         finish();
+        startActivity(getIntent());
     }
 
 

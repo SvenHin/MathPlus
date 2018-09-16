@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -47,7 +48,13 @@ public class Main extends Activity {
         });
 
     }
-    //TEST COMMIT 2
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("onResume", "Tilbake i Hoved");
+    }
+
 
 
     public boolean onCreateOptionsMenu(Menu menu){
