@@ -8,4 +8,18 @@
         <item>Norsk</item>
         <item>Deutsch</item>
     </string-array>
+    <string-array name="eq_array">
+        <item>2+4</item>
+        <item>7+3</item>
+        <item>1+4</item>
+        <item>6+2</item>
+        <item>5+2</item>
+    </string-array>
+    <string-array name="answr_array">
+        <item>9</item>
+        <item>8</item>
+        <item>6</item>
+        <item>7</item>
+        <item>0</item>
+    </string-array>
 </resources>
