@@ -1,84 +1,84 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\SvenH\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\53333909cf90b46bc0bf31ee179a6394\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hhesk\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\961159f87922aa529e0ec1dbaa32fba4\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:3:5-50
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:3:5-50
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:1-42:12
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:5:5-40:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\SvenH\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\53333909cf90b46bc0bf31ee179a6394\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\SvenH\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\53333909cf90b46bc0bf31ee179a6394\AndroidManifest.xml:9:5-20
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:5:5-40:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hhesk\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\961159f87922aa529e0ec1dbaa32fba4\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hhesk\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\961159f87922aa529e0ec1dbaa32fba4\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.svenhaakon.s315318s305204mappe1.Main
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:12:19-39
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:12:19-39
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:14:17-69
 	android:parentActivityName
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:22:21-55
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:22:21-55
 	android:name
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.svenhaakon.s315318s305204mappe1.PlayGame
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:19:9-25:20
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:19:19-43
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:19:19-43
 activity#com.svenhaakon.s315318s305204mappe1.Statistics
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:26:9-32:20
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:26:9-32:20
 	android:name
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:26:19-45
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:26:19-45
 activity#com.svenhaakon.s315318s305204mappe1.Settings
-ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:33:9-39:20
+ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:33:9-39:20
 	android:name
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:33:19-43
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml:33:19-43
 uses-sdk
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\SvenH\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\53333909cf90b46bc0bf31ee179a6394\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\SvenH\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\53333909cf90b46bc0bf31ee179a6394\AndroidManifest.xml:5:5-7:41
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hhesk\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\961159f87922aa529e0ec1dbaa32fba4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hhesk\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\961159f87922aa529e0ec1dbaa32fba4\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\SvenH\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hhesk\AndroidStudioProjects\MathOne\app\src\main\AndroidManifest.xml

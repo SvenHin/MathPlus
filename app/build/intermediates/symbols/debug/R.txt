@@ -64,9 +64,8 @@ int color colorPrimary 0x7f030001
 int color colorPrimaryDark 0x7f030002
 int drawable ic_launcher_background 0x7f040001
 int drawable ic_launcher_foreground 0x7f040002
-int drawable okbtn50 0x7f040003
-int drawable play 0x7f040004
-int drawable play50 0x7f040005
+int drawable play 0x7f040003
+int drawable play50 0x7f040004
 int id EqDisplayBox 0x7f050000
 int id answrbtn 0x7f050001
 int id barrier 0x7f050002

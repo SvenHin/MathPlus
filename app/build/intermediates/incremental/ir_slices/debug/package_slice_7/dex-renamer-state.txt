@@ -1,4 +1,4 @@
-#Sun Sep 16 16:15:30 CEST 2018
-base.0=C\:\\Users\\SvenH\\AndroidStudioProjects\\MathOne\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+#Sun Sep 16 19:48:30 CEST 2018
+base.0=C\:\\Users\\hhesk\\AndroidStudioProjects\\MathOne\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
 path.0=classes.dex
 renamed.0=classes.dex

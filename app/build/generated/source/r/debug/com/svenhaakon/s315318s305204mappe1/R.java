@@ -555,7 +555,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -571,9 +571,8 @@ public final class R {
   public static final class drawable {
     public static final int ic_launcher_background=0x7f040001;
     public static final int ic_launcher_foreground=0x7f040002;
-    public static final int okbtn50=0x7f040003;
-    public static final int play=0x7f040004;
-    public static final int play50=0x7f040005;
+    public static final int play=0x7f040003;
+    public static final int play50=0x7f040004;
   }
   public static final class id {
     public static final int EqDisplayBox=0x7f050000;
@@ -1645,7 +1644,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
