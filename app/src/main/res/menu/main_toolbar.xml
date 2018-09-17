@@ -5,6 +5,8 @@
 
     <item
         android:id="@+id/prefBtn"
-        android:title="@string/cogwheel" />
+        android:icon="@drawable/settings_icon_white"
+        android:title="@string/cogwheel"
+        android:showAsAction="ifRoom"/>
 
 </menu>

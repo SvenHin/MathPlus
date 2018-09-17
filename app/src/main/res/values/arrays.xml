@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="language_entires">
+    <string-array name="language_entries">
         <item>Norsk</item>
         <item>Tysk</item>
     </string-array>
     <string-array name="language_values">
         <item>Norsk</item>
         <item>Deutsch</item>
+    </string-array>
+    <string-array name="numRounds_entries">
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="numRounds_values">
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
     </string-array>
     <string-array name="eq_array">
         <item>2+4</item>

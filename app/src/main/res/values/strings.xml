@@ -7,4 +7,6 @@
     <string name="cogwheel">Cogwheel</string>
     <string name="pref_title">Instillinger</string>
     <string name="answr_btn">Svar</string>
+    <string name="pref_lang_btn">Språk</string>
+    <string name="pref_numRounds_btn">Antall spørsmål</string>
 </resources>

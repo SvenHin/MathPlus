@@ -39,18 +39,6 @@ public class Settings extends Activity {
         getFragmentManager().beginTransaction().replace(R.id.content, new SettingsFragment()).commit();
     }
 
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    */
-
     public static class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -63,9 +51,10 @@ public class Settings extends Activity {
             if (key.equals("changeLangPref")) {
                 Preference pref = findPreference(key);
                 pref.setSummary(sharedPreferences.getString(key, ""));
-                //if(sharedPreferences.getString(key, "").equals("Tysk")){
+                if(sharedPreferences.getString(key, "").equals("Deutsch")){
                     ((Settings) getActivity()).setLocale("de");
-                //}
+                }
+                else  ((Settings) getActivity()).setLocale("no");
             }
         }
 
@@ -85,16 +74,6 @@ public class Settings extends Activity {
                     .getSharedPreferences()
                     .unregisterOnSharedPreferenceChangeListener(this);
         }
-        public static void updateLanguage(SettingsFragment context, String selectedLanguage) {
-            if (!"".equals(selectedLanguage)) {
-                Locale locale = new Locale(selectedLanguage);
-                Locale.setDefault(locale);
-                Configuration config = new Configuration();
-                config.locale = locale;
-                context.getResources().updateConfiguration(config, null);
-            }
-        }
-
     }
 
     public void setLocale(String lang) {
@@ -107,6 +86,4 @@ public class Settings extends Activity {
         finish();
         startActivity(getIntent());
     }
-
-
 }

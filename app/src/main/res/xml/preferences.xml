@@ -3,8 +3,16 @@
     <ListPreference
         android:defaultValue="Norsk"
         android:key="changeLangPref"
-        android:entries="@array/language_entires"
+        android:entries="@array/language_entries"
         android:entryValues="@array/language_values"
         android:summary="%s"
-        android:title="Språk" />
+        android:title="@string/pref_lang_btn" />
+    <ListPreference
+        android:key="changeNumRoundsPref"
+        android:defaultValue="5"
+        android:entries="@array/numRounds_entries"
+        android:entryValues="@array/numRounds_values"
+        android:title="@string/pref_numRounds_btn"
+        android:summary="%s"
+        />
 </PreferenceScreen>
