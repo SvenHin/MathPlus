@@ -4,5 +4,26 @@
     <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
+    <style name="Toolbar" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:titleTextColor">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">5dp</item>
+    </style>
+    <style name="ToolbarTitle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="MainButtons" parent="android:Widget.DeviceDefault.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+    </style>
+
 
 </resources>

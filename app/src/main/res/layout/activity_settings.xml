@@ -6,20 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Settings"
+    android:background="@color/colorPrimary"
 >
     <Toolbar
-        android:id="@+id/settings_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:elevation="10dp">
+        style="@style/Toolbar"
+        android:id="@+id/settings_toolbar">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/pref_title"
-            android:textSize="20dp"
-            android:gravity="center"/>
+            style="@style/ToolbarTitle"
+            android:text="@string/pref_title" />
     </Toolbar>
 
     <FrameLayout

@@ -1,59 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/colorPrimary"
     tools:context=".Main">
 
     <Toolbar
+        style="@style/Toolbar"
         android:id="@+id/main_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/toolbar"
-        android:elevation="10dp"
-        android:titleTextColor="@color/text">
-
-
+        app:layout_constraintTop_toTopOf="parent">
 
     </Toolbar>
 
+
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/title_text"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="98dp"
         android:layout_marginTop="100dp"
         android:gravity="center"
         android:text="TextView"
-        android:textSize="75dp" />
+        android:textSize="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/playBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <Button
+        android:id="@+id/playBtn"
+        style="@style/MainButtons"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="151dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="300dp"
-        android:orientation="vertical">
+        android:layout_marginStart="40dp"
+        android:drawableLeft="@drawable/play_icon_48"
+        android:text="@string/play_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/statBtn"
+        style="@style/MainButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:drawableLeft="@drawable/stat_icon"
+        android:text="@string/stat_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
 
 
-        <Button
-            android:id="@+id/playBtn"
-            style="@android:style/Widget.DeviceDefault.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
-            android:drawableLeft="@drawable/play_icon_48"
-            android:text="@string/play_btn" />
-
-        <Button
-            android:id="@+id/statBtn"
-            style="@android:style/Widget.DeviceDefault.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
-            android:drawableLeft="@drawable/stat_icon"
-            android:text="@string/stat_btn" />
-
-    </LinearLayout>
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
