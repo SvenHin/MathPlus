@@ -15,12 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PlayGame">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:parentActivityName=".Main"/>
-            </intent-filter>
-        </activity>
         <activity android:name=".Statistics">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"

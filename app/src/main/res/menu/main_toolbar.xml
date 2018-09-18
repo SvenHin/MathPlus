@@ -4,9 +4,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <item
+        android:id="@+id/playBtn"
+        android:icon="@drawable/baseline_replay_white_18"
+        android:title="@string/play_btn"
+        android:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/statBtn"
+        android:icon="@drawable/baseline_show_chart_white_18"
+        android:title="@string/stat_btn"
+        android:showAsAction="ifRoom"/>
+
+    <item
         android:id="@+id/prefBtn"
-        android:icon="@drawable/settings_icon_white"
-        android:title="@string/cogwheel"
+        android:icon="@drawable/baseline_settings_white_18"
+        android:title="@string/pref_btn"
         android:showAsAction="ifRoom"/>
 
 </menu>

@@ -18,35 +18,67 @@
             android:text="@string/stat_title"/>
     </Toolbar>
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <TextView
+        android:id="@+id/lastRunTitle"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/stat_toolbar">
+        android:layout_height="wrap_content"
+        android:text="@string/lastRunTitle"
+        app:layout_constraintTop_toBottomOf="@id/stat_toolbar"/>
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/lastRunPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lastRunTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lastRunWrongs"
+        android:textColor="@color/forestgreen"/>
+    <TextView
+        android:id="@+id/lastRunWrongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lastRunTitle"
+        app:layout_constraintLeft_toRightOf="@id/lastRunPoints"
+        app:layout_constraintRight_toLeftOf="@id/lastRunQuestions"
+        android:textColor="@color/red"/>
+    <TextView
+        android:id="@+id/lastRunQuestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lastRunTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/lastRunWrongs"/>
 
-            <TextView
-                android:id="@+id/stat1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/stat2" />
+    <TextView
+        android:id="@+id/totalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/totalTitle"
+        app:layout_constraintTop_toBottomOf="@id/lastRunPoints"/>
 
-            <TextView
-                android:id="@+id/stat2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:background="@color/white"
-                app:layout_constraintBottom_toTopOf="@id/stat1" />
-        </android.support.constraint.ConstraintLayout>
-    </ScrollView>
+    <TextView
+        android:id="@+id/totalPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/totalTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/totalWrongs"
+        android:textColor="@color/forestgreen"/>
+    <TextView
+        android:id="@+id/totalWrongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/totalTitle"
+        app:layout_constraintLeft_toRightOf="@id/totalPoints"
+        app:layout_constraintRight_toLeftOf="@id/totalQuestions"
+        android:textColor="@color/red"/>
+    <TextView
+        android:id="@+id/totalQuestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/totalTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/totalWrongs"/>
 
 
 </android.support.constraint.ConstraintLayout>

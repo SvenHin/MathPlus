@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FirePhi</string>
     <string name="play_btn">Start spill</string>
-    <string name="stat_btn">Se statistikk</string>
+    <string name="stat_btn">Statistikk</string>
     <string name="pref_btn">Instillinger</string>
     <string name="changeLanguage_btn">Språk</string>
     <string name="cogwheel">Cogwheel</string>
@@ -22,5 +22,10 @@
     <string name="b8">8</string>
     <string name="b9">9</string>
     <string name="bSum">=</string>
-    <string name="bBlank">!</string>
+    <string name="bBlank">Fjern</string>
+    <string name="lastRunTitle">Sist runde</string>
+    <string name="totalTitle">Alle spill</string>
+    <string name="numPoints">%1$d poeng</string>
+    <string name="numWrongs">%1$d feil</string>
+    <string name="progression">%1$d/%2$d spørsmål</string>
 </resources>
