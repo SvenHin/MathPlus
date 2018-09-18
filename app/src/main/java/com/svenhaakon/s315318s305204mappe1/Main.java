@@ -18,6 +18,7 @@ import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toolbar;
 import android.widget.Toast;
@@ -53,7 +54,7 @@ public class Main extends Activity {
     TextView progressText;
     TextView correctText;
     TextView wrongText;
-    Button button;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,7 @@ public class Main extends Activity {
         correctText = (TextView) findViewById(R.id.correctCounter);
         wrongText = (TextView) findViewById(R.id.wrongCounter);
         textView = (TextView)findViewById(R.id.EqDisplayBox);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
         if(savedInstanceState == null){
@@ -93,6 +95,8 @@ public class Main extends Activity {
         progressText.setText(getString(R.string.progression, arrayIterator+1, questions));
         correctText.setText(getString(R.string.numPoints, points));
         wrongText.setText(getString(R.string.numWrongs, wrongs));
+        progressBar.setProgress(0);
+        progressBar.setMax(questions);
         showQuestion();
     }
 
@@ -128,6 +132,7 @@ public class Main extends Activity {
         correctText.setText(getString(R.string.numPoints, points));
         wrongText.setText(getString(R.string.numWrongs, wrongs));
         inputText.setText("");
+        progressBar.incrementProgressBy(1);
         if (arrayIterator == questions){
             textView.setText("Ferdig!");
             getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("points", points).apply();
