@@ -16,19 +16,16 @@
     </Toolbar>
 
 
-    <TextView
+    <ImageView
         android:id="@+id/title_text"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="98dp"
-        android:layout_marginTop="100dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textSize="75dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/firephilogo"
         app:layout_constraintBottom_toTopOf="@+id/playBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar" />
+
 
 
     <Button
@@ -36,14 +33,13 @@
         style="@style/MainButtons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="151dp"
         android:layout_marginEnd="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginStart="40dp"
         android:drawableLeft="@drawable/play_icon_48"
         android:text="@string/play_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
