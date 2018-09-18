@@ -63,7 +63,6 @@ public class PlayGame extends Activity {
         questionArray =  Arrays.asList(getResources().getStringArray(R.array.eq_array));
         answerArray =  Arrays.asList(getResources().getStringArray(R.array.answr_array));
         indexArray = getResources().getIntArray(R.array.index_array);
-        button = findViewById(R.id.answrbtn);
         inputText = (EditText) findViewById(R.id.eqInputBox);
         progressText = (TextView) findViewById(R.id.progressionText);
         correctText = (TextView) findViewById(R.id.correctCounter);
@@ -73,13 +72,6 @@ public class PlayGame extends Activity {
         if(savedInstanceState == null){
             initialize();
         }
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                checkAns();//sjekker og legger til poeng
-                nextQuestion();
-
-            }
-        });
     }
 
     private void initialize(){
@@ -121,7 +113,8 @@ public class PlayGame extends Activity {
         else wrongs++;
     }
 
-    private void nextQuestion(){
+    public void nextQuestion(View v){
+        checkAns();
         arrayIterator++;
         correctText.setText(String.valueOf(points));
         wrongText.setText(String.valueOf(wrongs));
@@ -156,6 +149,46 @@ public class PlayGame extends Activity {
     public void showPreferences(){
         Intent intent = new Intent(PlayGame.this, Settings.class);
         startActivity(intent);
+    }
+
+    public void number1(View v){
+        inputText.append("1");
+    }
+
+    public void number2(View v){
+        inputText.append("2");
+    }
+
+    public void number3(View v){
+        inputText.append("3");
+    }
+
+    public void number4(View v){
+        inputText.append("4");
+    }
+
+    public void number5(View v){
+        inputText.append("5");
+    }
+
+    public void number6(View v){
+        inputText.append("6");
+    }
+
+    public void number7(View v){
+        inputText.append("7");
+    }
+
+    public void number8(View v){
+        inputText.append("8");
+    }
+
+    public void number9(View v){
+        inputText.append("9");
+    }
+
+    public void number0(View v){
+        inputText.append("0");
     }
 
     protected void onSaveInstanceState(Bundle outState){

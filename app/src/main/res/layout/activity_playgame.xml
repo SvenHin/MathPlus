@@ -68,24 +68,154 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="10dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="number|numberSigned"
-        app:layout_constraintBaseline_toBaselineOf="@+id/answrbtn"
-        app:layout_constraintEnd_toStartOf="@+id/answrbtn"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/EqDisplayBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/b2"/>
+
 
     <Button
-        android:id="@+id/answrbtn"
-        style="@style/MainButtons"
+        android:id="@+id/b1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:text="@string/answr_btn"
+        android:text="@string/b1"
+        app:layout_constraintBottom_toTopOf="@id/b4"
+        app:layout_constraintRight_toLeftOf="@id/b2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="number1"
+
+
+        />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b2"
+        app:layout_constraintBottom_toTopOf="@id/b5"
+        app:layout_constraintRight_toLeftOf="@id/b3"
+        app:layout_constraintLeft_toRightOf="@id/b1"
+        android:onClick="number2"
+
+        />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b3"
+        app:layout_constraintBottom_toTopOf="@id/b6"
+        app:layout_constraintLeft_toRightOf="@id/b2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eqInputBox"
-        app:layout_constraintTop_toBottomOf="@+id/EqDisplayBox" />
+        android:onClick="number3"
+        />
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b4"
+        app:layout_constraintBottom_toTopOf="@id/b7"
+        app:layout_constraintRight_toLeftOf="@id/b5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="number4"
+
+        />
+
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b5"
+        app:layout_constraintBottom_toTopOf="@id/b8"
+        app:layout_constraintRight_toLeftOf="@id/b6"
+        app:layout_constraintLeft_toRightOf="@id/b4"
+        android:onClick="number5"
+
+        />
+
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b6"
+        app:layout_constraintBottom_toTopOf="@id/b9"
+        app:layout_constraintLeft_toRightOf="@id/b5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="number6"
+        />
+
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b7"
+        app:layout_constraintBottom_toTopOf="@id/bBlank"
+        app:layout_constraintRight_toLeftOf="@id/b8"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="number7"
+
+        />
+
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b8"
+        app:layout_constraintBottom_toTopOf="@id/b0"
+        app:layout_constraintRight_toLeftOf="@id/b9"
+        app:layout_constraintLeft_toRightOf="@id/b7"
+        android:onClick="number8"
+
+        />
+
+    <Button
+        android:id="@+id/b9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b9"
+        app:layout_constraintBottom_toTopOf="@id/bSum"
+        app:layout_constraintLeft_toRightOf="@id/b8"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="number9"
+        />
+
+    <Button
+        android:id="@+id/bBlank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bBlank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/b0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/b0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/b0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bSum"
+        app:layout_constraintLeft_toRightOf="@id/bBlank"
+        android:onClick="number0"
+        />
+
+    <Button
+        android:id="@+id/bSum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bSum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/b0"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="nextQuestion"
+        />
 
 
 </android.support.constraint.ConstraintLayout>

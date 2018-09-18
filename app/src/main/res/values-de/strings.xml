@@ -9,5 +9,15 @@
     <string name="pref_lang_btn">Spraaaaghghen</string>
     <string name="pref_numRounds_btn">Antahl rundaahr</string>
     <string name="stat_title">Statistikkhenen</string>
+    <string name="b0">0</string>
+    <string name="b1">1</string>
+    <string name="b2">2</string>
+    <string name="b3">3</string>
+    <string name="b4">4</string>
+    <string name="b5">5</string>
+    <string name="b6">6</string>
+    <string name="b7">7</string>
+    <string name="b8">8</string>
+    <string name="b9">9</string>
 
 </resources>
