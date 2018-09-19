@@ -28,4 +28,7 @@
     <string name="numPoints">%1$d poeng</string>
     <string name="numWrongs">%1$d feil</string>
     <string name="progression">%1$d/%2$d spørsmål</string>
+    <string name="exitDialogOk">Avslutt</string>
+    <string name="exitDialogNotOk">Fortsett å spille!</string>
+    <string name="exitDialog">Vil du avslutte spillet?</string>
 </resources>

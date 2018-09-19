@@ -1,6 +1,7 @@
 package com.svenhaakon.s315318s305204mappe1;
 
 import android.app.Activity;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -40,7 +41,7 @@ import static android.media.MediaCodec.MetricsConstants.MODE;
 import static com.svenhaakon.s315318s305204mappe1.R.array.answr_array;
 import static com.svenhaakon.s315318s305204mappe1.R.array.eq_array;
 
-public class Main extends Activity {
+public class Main extends Activity implements ExitDialog.DialogClickListener{
 
     List<String> questionArray;
     List<String> answerArray;
@@ -55,6 +56,9 @@ public class Main extends Activity {
     TextView correctText;
     TextView wrongText;
     ProgressBar progressBar;
+    boolean inGame;
+    ArrayList<Integer> indexList;
+    int maxQuestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +76,8 @@ public class Main extends Activity {
         wrongText = (TextView) findViewById(R.id.wrongCounter);
         textView = (TextView)findViewById(R.id.EqDisplayBox);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        maxQuestions = 25;
+        indexList = initList();
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
         if(savedInstanceState == null){
@@ -82,13 +88,50 @@ public class Main extends Activity {
         inputText.setShowSoftInputOnFocus(false);
     }
 
+    public ArrayList initList(){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for(int i = 0; i < maxQuestions; i++){
+            list.add(i);
+        }
+        return list;
+    }
 
+    public void printList(){
+        for(int i : indexList){
+            Log.d("List", String.valueOf(i));
+        }
+    }
+
+    @Override
+    public void onYesClick() {
+        finish();
+    }
+
+    @Override
+    public void onNoClick() {
+        return;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(inGame){
+            visDialog();
+        }
+        else super.onBackPressed();
+    }
+
+    public void visDialog(){
+        DialogFragment dialog = new ExitDialog();
+        dialog.show(getFragmentManager(),"Avslutt");
+    }
 
     private void initialize(){
+        inGame = false;
         points = 0;
         wrongs = 0;
         arrayIterator = 0;
-        shuffleArray(indexArray);
+        //shuffleArray(indexArray);
+        Collections.shuffle(indexList);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(Main.this);
         questions = Integer.parseInt(sharedPreferences.getString("changeNumRoundsPref", ""));
         //progressText.setText(arrayIterator+1 + "/" + String.valueOf(questions));
@@ -97,6 +140,7 @@ public class Main extends Activity {
         wrongText.setText(getString(R.string.numWrongs, wrongs));
         progressBar.setProgress(0);
         progressBar.setMax(questions);
+
         showQuestion();
     }
 
@@ -116,37 +160,43 @@ public class Main extends Activity {
     }
 
     private void showQuestion(){
-        textView.setText(questionArray.get(indexArray[arrayIterator]));
+        //textView.setText(questionArray.get(indexArray[arrayIterator]));
+        textView.setText(questionArray.get(indexList.remove(arrayIterator)));
     }
 
     private void checkAns(){
-        if((inputText.getText().toString().equals(answerArray.get(indexArray[arrayIterator]).toString()))){
+        if((inputText.getText().toString().equals(answerArray.get(indexList.get(arrayIterator))))){
             points++;
         }
         else wrongs++;
     }
 
     public void nextQuestion(View v){
+        inGame = true;
         checkAns();
-        arrayIterator++;
         correctText.setText(getString(R.string.numPoints, points));
         wrongText.setText(getString(R.string.numWrongs, wrongs));
         inputText.setText("");
         progressBar.incrementProgressBy(1);
+        arrayIterator++;
         if (arrayIterator == questions){
             textView.setText("Ferdig!");
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("points", points).apply();
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("wrongs", wrongs).apply();
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("numQuestions", questions).apply();
-
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalPoints", (points + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalPoints", 0))).apply();
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalWrongs", (wrongs + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalWrongs", 0))).apply();
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalQuestions", (questions + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalQuestions", 0))).apply();
-
+            saveToSharedPreferences();
             return;
         }
         progressText.setText(arrayIterator+1 + "/" + String.valueOf(questions));
         showQuestion();
+    }
+
+    public void saveToSharedPreferences(){
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("points", points).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("wrongs", wrongs).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("numQuestions", questions).apply();
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalPoints", (points + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalPoints", 0))).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalWrongs", (wrongs + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalWrongs", 0))).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalQuestions", (questions + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalQuestions", 0))).apply();
+
     }
 
 
