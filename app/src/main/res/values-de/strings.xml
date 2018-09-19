@@ -2,10 +2,11 @@
     <string name="app_name">FirePhy</string>
     <string name="play_btn">Starten spill</string>
     <string name="stat_btn">Se statistikken</string>
-    <string name="pref_btn">Instillingerrr</string>
+    <string name="pref_btn">Innstillingerrr</string>
     <string name="changeLanguage_btn">Spraagh</string>
     <string name="cogwheel">Coghwhal</string>
-    <string name="pref_title">Instillingerrrr</string>
+    <string name="pref_title">Innstillingerrrr</string>
+    <string name="game_title">Spillhen</string>
     <string name="pref_lang_btn">Spraaaaghghen</string>
     <string name="pref_numRounds_btn">Antahl rundaahr</string>
     <string name="stat_title">Statistikkhenen</string>
