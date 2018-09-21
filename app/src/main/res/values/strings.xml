@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FirePhi</string>
+    <string name="app_name">Matte+</string>
     <string name="play_btn">Start spill</string>
     <string name="stat_btn">Statistikk</string>
     <string name="pref_btn">Instillinger</string>
@@ -31,4 +31,10 @@
     <string name="exitDialogOk">Avslutt</string>
     <string name="exitDialogNotOk">Fortsett å spille!</string>
     <string name="exitDialog">Vil du avslutte spillet?</string>
+    <string name="gameDoneDialog">Du har gått gjennom alle regnestykkene, godt jobbet!</string>
+    <string name="gameDoneDialogOk">Avslutt spillet</string>
+    <string name="gameComplete">Ferdig med runden!</string>
+    <string name="mainCorrectString">Riktige</string>
+    <string name="mainWrongString">Feil</string>
+
 </resources>

@@ -19,66 +19,63 @@
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:src="@drawable/firephiround"
+            android:src="@drawable/mathlogo"
             android:elevation="20dp"/>
     </Toolbar>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:id="@+id/correctCounter"
-        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/wrongCounter"
+        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
         android:textSize="20sp"
-        android:layout_marginStart="10dp"
-        android:textColor="@color/forestgreen"/>
+        android:background="@color/Colorok"
+        android:text="0"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:elevation="5dp"
+        android:textColor="@color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:id="@+id/wrongCounter"
-        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
-        app:layout_constraintStart_toEndOf="@id/correctCounter"
-        android:textSize="20sp"
-        android:layout_marginStart="10dp"
-        android:textColor="@color/red"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressionText"
-        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
         android:textSize="20sp"
-        android:layout_marginEnd="10dp"/>
+        android:background="@color/Colorerase"
+        android:text="0"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:elevation="5dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/EqDisplayBox"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:layout_margin="10dp"
-        android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:textSize="40sp"
-        app:layout_constraintTop_toBottomOf="@id/progressionText"
+        android:textSize="100sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/correctCounter" />
 
 
 
     <EditText
         android:id="@+id/eqInputBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="50dp"
         android:background="@color/white"
-        android:ems="10"
-
+        android:textSize="30sp"
+        android:gravity="center"
         android:inputType="number|numberSigned"
-        app:layout_constraintTop_toBottomOf="@id/EqDisplayBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/progressBar"/>
@@ -113,7 +110,7 @@
         app:layout_constraintBottom_toTopOf="@id/b4"
         app:layout_constraintRight_toLeftOf="@id/b2"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         android:onClick="number1"
         android:backgroundTint="@color/Color1"
 
@@ -146,7 +143,7 @@
         style="@style/NumberButtons"
         android:id="@+id/b4"
         android:text="@string/b4"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toTopOf="@id/b7"
         app:layout_constraintRight_toLeftOf="@id/b5"
         app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +177,7 @@
         style="@style/NumberButtons"
         android:id="@+id/b7"
         android:text="@string/b7"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/b8"
         app:layout_constraintStart_toStartOf="parent"
@@ -214,7 +211,7 @@
         style="@style/NumberButtons"
         android:id="@+id/bBlank"
         android:text="@string/bBlank"
-        android:layout_marginRight="40dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toTopOf="@id/b0"
         app:layout_constraintLeft_toRightOf="@id/b6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -226,7 +223,7 @@
         style="@style/NumberButtons"
         android:id="@+id/b0"
         android:text="@string/b0"
-        android:layout_marginRight="40dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/b9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -238,7 +235,7 @@
         style="@style/NumberButtons"
         android:id="@+id/bSum"
         android:text="@string/bSum"
-        android:layout_marginRight="40dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toTopOf="@id/bBlank"
         app:layout_constraintLeft_toRightOf="@id/b3"
         app:layout_constraintEnd_toEndOf="parent"

@@ -30,6 +30,8 @@ import java.util.Locale;
 
 public class Settings extends Activity {
 
+    public static boolean langChanged = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,14 +78,14 @@ public class Settings extends Activity {
         }
     }
 
-    public void setLocale(String lang) {
+    private void setLocale(String lang) {
         Locale myLocale = new Locale(lang);
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
         Configuration conf = res.getConfiguration();
         conf.locale = myLocale;
         res.updateConfiguration(conf, dm);
-        finish();
-        startActivity(getIntent());
+        langChanged = true;
+        recreate();
     }
 }

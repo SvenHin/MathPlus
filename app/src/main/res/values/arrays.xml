@@ -19,31 +19,31 @@
         <item>25</item>
     </string-array>
     <string-array name="eq_array">
-        <item>2+4</item>
-        <item>7+3</item>
-        <item>1+4</item>
-        <item>6+2</item>
-        <item>5+2</item>
-        <item>2-4</item>
-        <item>7-3</item>
-        <item>1-7</item>
-        <item>2-2</item>
-        <item>5-2</item>
-        <item>2*4</item>
-        <item>7*3</item>
-        <item>8/4</item>
-        <item>6/2</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
-        <item>10+10</item>
+        <item>2 + 4</item>
+        <item>7 + 3</item>
+        <item>1 + 4</item>
+        <item>6 + 2</item>
+        <item>5 + 2</item>
+        <item>2 - 4</item>
+        <item>7 - 3</item>
+        <item>1 - 7</item>
+        <item>2 - 2</item>
+        <item>5 - 2</item>
+        <item>2 * 4</item>
+        <item>7 * 3</item>
+        <item>8 / 4</item>
+        <item>6 / 2</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
+        <item>10 + 10</item>
     </string-array>
     <string-array name="answr_array">
         <item>6</item>

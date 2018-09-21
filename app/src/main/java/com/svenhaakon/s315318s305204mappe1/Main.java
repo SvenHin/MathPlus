@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.renderscript.Sampler;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Pair;
 import android.view.Menu;
@@ -33,6 +35,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -41,7 +44,7 @@ import static android.media.MediaCodec.MetricsConstants.MODE;
 import static com.svenhaakon.s315318s305204mappe1.R.array.answr_array;
 import static com.svenhaakon.s315318s305204mappe1.R.array.eq_array;
 
-public class Main extends Activity implements ExitDialog.DialogClickListener{
+public class Main extends Activity implements ExitDialog.DialogClickListener, GameDoneDialog.DialogClickListener{
 
     List<String> questionArray;
     List<String> answerArray;
@@ -59,6 +62,20 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
     ArrayList<Integer> indexList;
     private int currentIndex;
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(Settings.langChanged){
+            Settings.langChanged = false;
+            rec();
+        }
+    }
+
+    public void rec(){
+        this.recreate();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +83,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
         Toolbar settingsToolbar = (Toolbar)findViewById(R.id.game_toolbar);
         setActionBar(settingsToolbar);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+
 
         //XML arrays
         questionArray =  Arrays.asList(getResources().getStringArray(R.array.eq_array));
@@ -78,7 +96,6 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
         inputText.setShowSoftInputOnFocus(false);
 
         //TextViews
-        progressText = (TextView) findViewById(R.id.progressionText);
         correctText = (TextView) findViewById(R.id.correctCounter);
         wrongText = (TextView) findViewById(R.id.wrongCounter);
         textView = (TextView)findViewById(R.id.EqDisplayBox);
@@ -86,26 +103,43 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
         //ProgressBar
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        //ArrayList of 25 indexes, when all indexes are gone user is asked to exit
-        indexList = initList(25);
+
 
         //You will not be "in game" before you do an action
         inGame = false;
 
         //Only run initialize when not restoring from another instance
-        if(savedInstanceState == null) initialize();
+        if(savedInstanceState == null){
+            if(PreferenceManager.getDefaultSharedPreferences(this).getString("changeLangPref", "").equals("Deutsch")){
+                setLocale("de");
+            }
+            //ArrayList of 25 indexes, when all indexes are gone user is asked to exit
+            indexList = initList(25);
+            initialize();
+        }
+    }
+
+    private void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Settings.langChanged = false;
+        rec();
     }
 
     private void initialize(){
         points = 0;
         wrongs = 0;
         questionCounter = 0;
+
         Collections.shuffle(indexList);
         questions = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(this).getString("changeNumRoundsPref", ""));
 
-        progressText.setText(getString(R.string.progression, questionCounter+1, questions));
-        correctText.setText(getString(R.string.numPoints, points));
-        wrongText.setText(getString(R.string.numWrongs, wrongs));
+        correctText.setText(String.valueOf(points));
+        wrongText.setText(String.valueOf(wrongs));
 
         progressBar.setProgress(0);
         progressBar.setMax(questions);
@@ -114,7 +148,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
     }
 
     public ArrayList initList(int maxQuestions){
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         for(int i = 0; i < maxQuestions; i++){
             list.add(i);
         }
@@ -122,42 +156,54 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
     }
 
     private void showQuestion(){
-        currentIndex = indexList.remove(0);
-        textView.setText(questionArray.get(currentIndex));
+        if(indexList.size() != 0){
+            Log.d("showQuestion", String.valueOf(indexList.size()));
+            if(questions != questionCounter){
+                currentIndex = indexList.get(0);
+                textView.setText(questionArray.get(currentIndex));
+            }
+            else {
+                textView.setText(getText(R.string.gameComplete));
+                saveToSharedPreferences();
+                return;
+            }
+        }
+        else{
+            saveToSharedPreferences();
+            showGameDoneDialog();
+        }
     }
 
     private void checkAns(){
         if((inputText.getText().toString().equals(answerArray.get(currentIndex)))){
             points++;
+            correctText.setText(String.valueOf(points));
         }
-        else wrongs++;
+        else{
+            wrongs++;
+            wrongText.setText(String.valueOf(wrongs));
+        }
     }
 
     public void nextQuestion(View v){
-        //inGame = true;
+        if(!inGame) inGame = true;
         checkAns();
-        correctText.setText(getString(R.string.numPoints, points));
-        wrongText.setText(getString(R.string.numWrongs, wrongs));
+        indexList.remove(0);
         inputText.setText("");
         progressBar.incrementProgressBy(1);
         questionCounter++;
-        if (questionCounter == questions){
-            textView.setText("Ferdig!");
-            saveToSharedPreferences();
-            return;
-        }
-        progressText.setText(getString(R.string.progression, questionCounter+1, questions));
         showQuestion();
+
     }
 
     public void saveToSharedPreferences(){
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("points", points).apply();
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("wrongs", wrongs).apply();
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("numQuestions", questions).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("numQuestions", questionCounter).apply();
 
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalPoints", (points + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalPoints", 0))).apply();
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalWrongs", (wrongs + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalWrongs", 0))).apply();
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalQuestions", (questions + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalQuestions", 0))).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("totalQuestions", (questionCounter + getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("totalQuestions", 0))).apply();
 
     }
 
@@ -255,16 +301,26 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
     }
 
     @Override
+    public void gameDoneOnYesClick(){
+        finish();
+    }
+
+    @Override
     public void onBackPressed() {
         if(inGame){
-            visDialog();
+            showExitDialog();
         }
         else super.onBackPressed();
     }
 
-    public void visDialog(){
+    public void showExitDialog(){
         DialogFragment dialog = new ExitDialog();
         dialog.show(getFragmentManager(),"Avslutt");
+    }
+
+    public void showGameDoneDialog(){
+        DialogFragment dialog = new GameDoneDialog();
+        dialog.show(getFragmentManager(),"GameDone");
     }
 
     //////////////////////////////////////////////////////////////////////////////////////
@@ -276,12 +332,15 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
         outState.putString("inputText", inputText.getText().toString());
         outState.putString("cCounter", correctText.getText().toString());
         outState.putString("wCounter", wrongText.getText().toString());
-        outState.putString("pText", progressText.getText().toString());
         outState.putString("questionText", textView.getText().toString());
         outState.putInt("points", points);
         outState.putInt("wrongs", wrongs);
         outState.putInt("questionNum", questions);
         outState.putInt("questionCounter", questionCounter);
+        outState.putInt("progressBar", progressBar.getProgress());
+        outState.putInt("progressBarMax", progressBar.getMax());
+        outState.putInt("currentIndex", currentIndex);
+        outState.putIntegerArrayList("indexList", indexList);
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState){
@@ -289,12 +348,15 @@ public class Main extends Activity implements ExitDialog.DialogClickListener{
         inputText.setText(savedInstanceState.getString("inputText"));
         correctText.setText(savedInstanceState.getString("cCounter"));
         wrongText.setText(savedInstanceState.getString("wCounter"));
-        progressText.setText(savedInstanceState.getString("pText"));
         textView.setText(savedInstanceState.getString("questionText"));
         points = savedInstanceState.getInt("points");
         wrongs = savedInstanceState.getInt("wrongs");
         questions = savedInstanceState.getInt("questionNum");
         questionCounter = savedInstanceState.getInt("questionCounter");
+        progressBar.setProgress(savedInstanceState.getInt("progressBar"));
+        progressBar.setMax(savedInstanceState.getInt("progressBarMax"));
+        currentIndex = savedInstanceState.getInt("currentIndex");
+        indexList = savedInstanceState.getIntegerArrayList("indexList");
     }
 
     //////////////////////////////////////////////////////////////////////////////////
