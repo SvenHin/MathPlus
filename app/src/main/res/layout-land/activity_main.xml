@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryOrange"
+    tools:context=".Main">
+
+    <Toolbar
+        android:id="@+id/game_toolbar"
+        style="@style/Toolbar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/toolbarLogo"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/firephiround"
+            android:elevation="20dp"/>
+    </Toolbar>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/correctCounter"
+        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wrongCounter"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/forestgreen"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wrongCounter"
+        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
+        app:layout_constraintStart_toEndOf="@id/correctCounter"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressionText"
+        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/EqDisplayBox"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/progressionText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <EditText
+        android:id="@+id/eqInputBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:ems="10"
+
+        android:inputType="number|numberSigned"
+        app:layout_constraintTop_toBottomOf="@id/EqDisplayBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/progressBar"/>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1"
+        android:weightSum="2"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:progressBackgroundTint="@color/Colorerase"
+        android:progressTint="@color/Colorok"
+
+
+
+
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b1"
+        android:text="@string/b1"
+        app:layout_constraintBottom_toTopOf="@id/b4"
+        app:layout_constraintRight_toLeftOf="@id/b2"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:onClick="number1"
+        android:backgroundTint="@color/Color1"
+
+
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b2"
+        android:text="@string/b2"
+        app:layout_constraintBottom_toTopOf="@id/b5"
+        app:layout_constraintRight_toLeftOf="@id/b3"
+        app:layout_constraintLeft_toRightOf="@id/b1"
+        android:onClick="number2"
+        android:backgroundTint="@color/Color2"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b3"
+        android:text="@string/b3"
+        app:layout_constraintBottom_toTopOf="@id/b6"
+        app:layout_constraintLeft_toRightOf="@id/b2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="number3"
+        android:backgroundTint="@color/Color3"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b4"
+        android:text="@string/b4"
+        app:layout_constraintBottom_toTopOf="@id/b7"
+        app:layout_constraintRight_toLeftOf="@id/b5"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:onClick="number4"
+        android:backgroundTint="@color/Color4"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b5"
+        android:text="@string/b5"
+        app:layout_constraintBottom_toTopOf="@id/b8"
+        app:layout_constraintRight_toLeftOf="@id/b6"
+        app:layout_constraintLeft_toRightOf="@id/b4"
+        android:onClick="number5"
+        android:backgroundTint="@color/Color5"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b6"
+        android:text="@string/b6"
+        app:layout_constraintBottom_toTopOf="@id/b9"
+        app:layout_constraintLeft_toRightOf="@id/b5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="number6"
+        android:backgroundTint="@color/Color6"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b7"
+        android:text="@string/b7"
+        app:layout_constraintBottom_toTopOf="@id/bBlank"
+        app:layout_constraintRight_toLeftOf="@id/b8"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:onClick="number7"
+        android:backgroundTint="@color/Color7"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b8"
+        android:text="@string/b8"
+        app:layout_constraintBottom_toTopOf="@id/b0"
+        app:layout_constraintRight_toLeftOf="@id/b9"
+        app:layout_constraintLeft_toRightOf="@id/b7"
+        android:onClick="number8"
+        android:backgroundTint="@color/Color8"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b9"
+        android:text="@string/b9"
+        app:layout_constraintBottom_toTopOf="@id/bSum"
+        app:layout_constraintLeft_toRightOf="@id/b8"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="number9"
+        android:backgroundTint="@color/Color9"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/bBlank"
+        android:text="@string/bBlank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:onClick="backspace"
+        android:backgroundTint="@color/Colorerase"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/b0"
+        android:text="@string/b0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/bBlank"
+        app:layout_constraintRight_toLeftOf="@id/bSum"
+        android:onClick="number0"
+        android:backgroundTint="@color/Color0"
+        />
+
+    <Button
+        style="@style/NumberButtonsLand"
+        android:id="@+id/bSum"
+        android:text="@string/bSum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/b0"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="nextQuestion"
+        android:backgroundTint="@color/Colorok"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

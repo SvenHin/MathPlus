@@ -20,7 +20,7 @@
     <string name="b7">7</string>
     <string name="b8">8</string>
     <string name="b9">9</string>
-    <string name="bBlank">entfernt</string>
+    <string name="bBlank">←</string>
     <string name="lastRunTitle">Vorherige Runde</string>
     <string name="totalTitle">Alle Spiele</string>
     <string name="numPoints">%1$d poeng</string>

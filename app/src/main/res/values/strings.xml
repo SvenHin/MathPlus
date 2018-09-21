@@ -22,7 +22,7 @@
     <string name="b8">8</string>
     <string name="b9">9</string>
     <string name="bSum">=</string>
-    <string name="bBlank">Fjern</string>
+    <string name="bBlank">←</string>
     <string name="lastRunTitle">Sist runde</string>
     <string name="totalTitle">Alle spill</string>
     <string name="numPoints">%1$d poeng</string>
