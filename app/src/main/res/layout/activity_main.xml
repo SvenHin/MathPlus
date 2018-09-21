@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorPrimaryOrange"
     tools:context=".Main">
 
     <Toolbar
@@ -83,6 +83,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/progressBar"/>
 
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
     <ProgressBar
         android:id="@+id/progressBar"
         style="@android:style/Widget.ProgressBar.Horizontal"
@@ -90,146 +99,151 @@
         android:layout_height="wrap_content"
         android:progress="0"
         app:layout_constraintBottom_toTopOf="@id/b2"
+        android:progressBackgroundTint="@color/Colorerase"
+        android:progressTint="@color/Colorok"
+
+
 
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b1"
         app:layout_constraintBottom_toTopOf="@id/b4"
         app:layout_constraintRight_toLeftOf="@id/b2"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="40dp"
         android:onClick="number1"
+        android:backgroundTint="@color/Color1"
 
 
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b2"
         app:layout_constraintBottom_toTopOf="@id/b5"
         app:layout_constraintRight_toLeftOf="@id/b3"
         app:layout_constraintLeft_toRightOf="@id/b1"
         android:onClick="number2"
-
+        android:backgroundTint="@color/Color2"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b3"
         app:layout_constraintBottom_toTopOf="@id/b6"
         app:layout_constraintLeft_toRightOf="@id/b2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bSum"
         android:onClick="number3"
+        android:backgroundTint="@color/Color3"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b4"
+        android:layout_marginLeft="40dp"
         app:layout_constraintBottom_toTopOf="@id/b7"
         app:layout_constraintRight_toLeftOf="@id/b5"
         app:layout_constraintStart_toStartOf="parent"
         android:onClick="number4"
-
+        android:backgroundTint="@color/Color4"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b5"
         app:layout_constraintBottom_toTopOf="@id/b8"
         app:layout_constraintRight_toLeftOf="@id/b6"
         app:layout_constraintLeft_toRightOf="@id/b4"
         android:onClick="number5"
-
+        android:backgroundTint="@color/Color5"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b6"
         app:layout_constraintBottom_toTopOf="@id/b9"
         app:layout_constraintLeft_toRightOf="@id/b5"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bBlank"
         android:onClick="number6"
+        android:backgroundTint="@color/Color6"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b7"
-        app:layout_constraintBottom_toTopOf="@id/bBlank"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/b8"
         app:layout_constraintStart_toStartOf="parent"
         android:onClick="number7"
-
+        android:backgroundTint="@color/Color7"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b8"
-        app:layout_constraintBottom_toTopOf="@id/b0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/b9"
         app:layout_constraintLeft_toRightOf="@id/b7"
         android:onClick="number8"
-
+        android:backgroundTint="@color/Color8"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b9"
-        app:layout_constraintBottom_toTopOf="@id/bSum"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/b8"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="number9"
-        />
-
-    <Button
-        android:id="@+id/bBlank"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/bBlank"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/b0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="number9"
+        android:backgroundTint="@color/Color9"
+        />
+
+    <Button
+        style="@style/NumberButtons"
+        android:id="@+id/bBlank"
+        android:text="@string/bBlank"
+        android:layout_marginRight="40dp"
+        app:layout_constraintBottom_toTopOf="@id/b0"
+        app:layout_constraintLeft_toRightOf="@id/b6"
+        app:layout_constraintEnd_toEndOf="parent"
         android:onClick="backspace"
+        android:backgroundTint="@color/Colorerase"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/b0"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/b0"
+        android:layout_marginRight="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/bSum"
-        app:layout_constraintLeft_toRightOf="@id/bBlank"
+        app:layout_constraintLeft_toRightOf="@id/b9"
+        app:layout_constraintEnd_toEndOf="parent"
         android:onClick="number0"
+        android:backgroundTint="@color/Color0"
         />
 
     <Button
+        style="@style/NumberButtons"
         android:id="@+id/bSum"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/bSum"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/b0"
+        android:layout_marginRight="40dp"
+        app:layout_constraintBottom_toTopOf="@id/bBlank"
+        app:layout_constraintLeft_toRightOf="@id/b3"
         app:layout_constraintEnd_toEndOf="parent"
         android:onClick="nextQuestion"
+        android:backgroundTint="@color/Colorok"
         />
 
 

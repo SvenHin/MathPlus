@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">FirePhy</string>
-    <string name="play_btn">Starten spill</string>
-    <string name="stat_btn">Se statistikken</string>
-    <string name="pref_btn">Innstillingerrr</string>
-    <string name="changeLanguage_btn">Spraagh</string>
+    <string name="app_name">Matte+</string>
+    <string name="play_btn">Spill Starten</string>
+    <string name="stat_btn">Statistik</string>
+    <string name="pref_btn">Einstellungen</string>
+    <string name="changeLanguage_btn">Sprache</string>
     <string name="cogwheel">Coghwhal</string>
-    <string name="pref_title">Innstillingerrrr</string>
-    <string name="game_title">Spillhen</string>
-    <string name="pref_lang_btn">Spraaaaghghen</string>
-    <string name="pref_numRounds_btn">Antahl rundaahr</string>
-    <string name="stat_title">Statistikkhenen</string>
+    <string name="pref_title">Einstellungen</string>
+    <string name="game_title">Matte+</string>
+    <string name="pref_lang_btn">Sprache</string>
+    <string name="pref_numRounds_btn">Anzahl der Runden</string>
+    <string name="stat_title">Statistik</string>
     <string name="b0">0</string>
     <string name="b1">1</string>
     <string name="b2">2</string>
@@ -20,5 +20,15 @@
     <string name="b7">7</string>
     <string name="b8">8</string>
     <string name="b9">9</string>
+    <string name="bBlank">entfernt</string>
+    <string name="lastRunTitle">Vorherige Runde</string>
+    <string name="totalTitle">Alle Spiele</string>
+    <string name="numPoints">%1$d poeng</string>
+    <string name="numWrongs">%1$d feil</string>
+    <string name="progression">%1$d/%2$d spørsmål</string>
+    <string name="exitDialogOk">Avslutt</string>
+    <string name="exitDialogNotOk">Fortsett å spille!</string>
+    <string name="exitDialog">Vil du avslutte spillet?</string>
+
 
 </resources>

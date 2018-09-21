@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Statistics"
     android:id="@+id/relativeLayout2"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimaryOrange">
 
     <Toolbar
         android:id="@+id/stat_toolbar"

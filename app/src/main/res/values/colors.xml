@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#efe5d5</color>
-    <color name="colorPrimaryDark">#453823</color>
-    <color name="colorAccent">#FFFFFF</color>
-    <color name="white">#FFFFFF</color>
+    <color name="colorPrimaryLight">#3fa6de</color>
+    <color name="colorPrimaryOrange">#f79d25</color>
+    <color name="colorAccent">#948e96</color>
+    <color name="white">#ffffff</color>
     <color name="forestgreen">#228B22</color>
     <color name="red">#ff0000</color>
+    <color name="turkis">#5fecb5</color>
+    <color name="pink">#df79c4</color>
     <color name="black">#000000</color>
+    <color name="Color1">#bb85fd</color>
+    <color name="Color2">#e89bf1</color>
+    <color name="Color3">#e7abe0</color>
+    <color name="Color4">#e4cfc0</color>
+    <color name="Color5">#d8e4b2</color>
+    <color name="Color6">#8ee8b3</color>
+    <color name="Color7">#66cc99</color>
+    <color name="Color8">#5da5b7</color>
+    <color name="Color9">#667dc0</color>
+    <color name="Color0">#66cc99</color>
+    <color name="Colorok">#3cfb7d</color>
+    <color name="Colorerase">#e56b9a</color>
+    <color name="blue">#3fa6de</color>
+
 </resources>
