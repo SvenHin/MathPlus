@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/game_toolbar"
         android:textSize="20sp"
-        android:background="@color/Colorok"
+        android:background="@color/Color6"
         android:text="0"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -97,7 +97,7 @@
         android:progress="0"
         app:layout_constraintBottom_toTopOf="@id/b2"
         android:progressBackgroundTint="@color/Colorerase"
-        android:progressTint="@color/Colorok"
+        android:progressTint="@color/Color6"
 
 
 
