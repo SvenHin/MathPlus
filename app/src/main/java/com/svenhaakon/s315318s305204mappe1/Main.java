@@ -44,12 +44,12 @@ import static android.media.MediaCodec.MetricsConstants.MODE;
 import static com.svenhaakon.s315318s305204mappe1.R.array.answr_array;
 import static com.svenhaakon.s315318s305204mappe1.R.array.eq_array;
 
-public class Main extends Activity implements ExitDialog.DialogClickListener, GameDoneDialog.DialogClickListener{
+public class Main extends Activity implements ExitDialog.DialogClickListener, GameDoneDialog.DialogClickListener, ReplayDialog.DialogClickListener{
 
     private int points, wrongs, questionCounter, questions, currentIndex;
     private List<String> questionArray, answerArray;
     private EditText inputText;
-    private TextView textView, correctText, wrongText;
+    private TextView textView, correctText, wrongText, progressText;
     private ProgressBar progressBar;
     private boolean inGame;
     private ArrayList<Integer> indexList;
@@ -72,6 +72,8 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         setActionBar(settingsToolbar);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
+
+
         //List from XML arrays
         questionArray =  Arrays.asList(getResources().getStringArray(R.array.eq_array));
         answerArray =  Arrays.asList(getResources().getStringArray(R.array.answr_array));
@@ -79,19 +81,17 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         //The answer input field
         inputText = (EditText) findViewById(R.id.eqInputBox);
 
-        //Keeps the keyboard hidden
-        inputText.setShowSoftInputOnFocus(false);
-
         //TextViews
         correctText = (TextView) findViewById(R.id.correctCounter);
         wrongText = (TextView) findViewById(R.id.wrongCounter);
+        progressText = (TextView) findViewById(R.id.progressCounter);
         textView = (TextView)findViewById(R.id.EqDisplayBox);
+
+        //Keeps the keyboard hidden
+        inputText.setShowSoftInputOnFocus(false);
 
         //ProgressBar
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-
-        //You will not be "in game" before you do an action
-        inGame = false;
 
         //Only run initialize when not restoring from another instance
         if(savedInstanceState == null){
@@ -105,6 +105,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         }
     }
 
+    //Creates and returns a list of indexes
     public ArrayList initList(int maxQuestions){
         ArrayList<Integer> list = new ArrayList<>();
         for(int i = 0; i < maxQuestions; i++){
@@ -113,25 +114,43 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         return list;
     }
 
+
     private void initialize(){
+        //Set basic values to 0
         points = 0;
         wrongs = 0;
         questionCounter = 0;
+
+        //Get # questions for this round
         questions = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(this).getString("changeNumRoundsPref", ""));
 
-        correctText.setText(String.valueOf(points));
-        wrongText.setText(String.valueOf(wrongs));
+        //You will not be "in game" before you do an action
+        inGame = false;
 
+        //Init progressbar
         progressBar.setProgress(0);
         progressBar.setMax(questions);
 
+        //Shuffle indexList
         Collections.shuffle(indexList);
-        showQuestion();
+
+        //Print score values
+        printValues();
+
+        //Show question
+        printQuestion();
+    }
+
+    private void printValues(){
+        correctText.setText(String.valueOf(points));
+        wrongText.setText(String.valueOf(wrongs));
+        progressText.setText(String.valueOf(questions));
     }
 
     /////////////////////////////////// Game Logic Methods ///////////////////////////////////
 
-    private void showQuestion(){
+    private void printQuestion(){
+
         if(indexList.size() != 0){
             if(questions != questionCounter){
                 currentIndex = indexList.get(0);
@@ -167,7 +186,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         inputText.setText("");
         progressBar.incrementProgressBy(1);
         questionCounter++;
-        showQuestion();
+        printQuestion();
     }
 
     public void saveToSharedPreferences(){
@@ -192,7 +211,10 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.playBtn:
-                initialize();
+                if(inGame){
+                    showReplayDialog();
+                }
+                else initialize();
                 break;
             case R.id.statBtn:
                 Intent i = new Intent(Main.this, Statistics.class);
@@ -273,6 +295,16 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
     }
 
     @Override
+    public void restartOnYesClick() {
+        initialize();
+    }
+
+    @Override
+    public void restartOnNoClick() {
+        return;
+    }
+
+    @Override
     public void gameDoneOnYesClick(){
         finish();
     }
@@ -287,12 +319,17 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
 
     public void showExitDialog(){
         DialogFragment dialog = new ExitDialog();
-        dialog.show(getFragmentManager(),"Avslutt");
+        dialog.show(getFragmentManager(),"Exit");
     }
 
     public void showGameDoneDialog(){
         DialogFragment dialog = new GameDoneDialog();
         dialog.show(getFragmentManager(),"GameDone");
+    }
+
+    public void showReplayDialog(){
+        DialogFragment dialog = new ReplayDialog();
+        dialog.show(getFragmentManager(),"Restart");
     }
 
     //////////////////////////////////////////////////////////////////////////////////////
@@ -302,8 +339,6 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
     protected void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
         outState.putString("inputText", inputText.getText().toString());
-        outState.putString("cCounter", correctText.getText().toString());
-        outState.putString("wCounter", wrongText.getText().toString());
         outState.putString("questionText", textView.getText().toString());
         outState.putInt("points", points);
         outState.putInt("wrongs", wrongs);
@@ -313,13 +348,12 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         outState.putInt("progressBarMax", progressBar.getMax());
         outState.putInt("currentIndex", currentIndex);
         outState.putIntegerArrayList("indexList", indexList);
+        outState.putBoolean("inGame", inGame);
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState){
         super.onRestoreInstanceState(savedInstanceState);
         inputText.setText(savedInstanceState.getString("inputText"));
-        correctText.setText(savedInstanceState.getString("cCounter"));
-        wrongText.setText(savedInstanceState.getString("wCounter"));
         textView.setText(savedInstanceState.getString("questionText"));
         points = savedInstanceState.getInt("points");
         wrongs = savedInstanceState.getInt("wrongs");
@@ -329,6 +363,9 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         progressBar.setMax(savedInstanceState.getInt("progressBarMax"));
         currentIndex = savedInstanceState.getInt("currentIndex");
         indexList = savedInstanceState.getIntegerArrayList("indexList");
+        inGame = savedInstanceState.getBoolean("inGame");
+        printValues();
+
     }
 
     //////////////////////////////////////////////////////////////////////////////////

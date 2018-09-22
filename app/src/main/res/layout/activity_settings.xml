@@ -13,6 +13,15 @@
         style="@style/Toolbar"
         android:id="@+id/settings_toolbar">
 
+
+        <ImageView
+            android:id="@+id/toolbarLogo"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/mathlogo"
+            android:elevation="20dp"/>
         <TextView
             style="@style/ToolbarTitle"
             android:text="@string/pref_title" />

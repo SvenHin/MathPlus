@@ -31,34 +31,34 @@
         android:orientation="vertical" /> <!-- GuideLine-->
 
     <TextView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        style="@style/SmallBox"
         android:id="@+id/correctCounter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/game_toolbar"
-        android:textSize="20sp"
-        android:background="@color/Colorok"
-        android:text="0"
+        android:background="@drawable/rounded_corners_green"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:elevation="5dp"
-        android:textColor="@color/white"/> <!-- correctCounter-->
+        /> <!-- correctCounter-->
 
     <TextView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        style="@style/SmallBox"
         android:id="@+id/wrongCounter"
+        app:layout_constraintRight_toLeftOf="@id/progressCounter"
+        app:layout_constraintLeft_toRightOf="@id/correctCounter"
+        app:layout_constraintTop_toBottomOf="@id/game_toolbar"
+        android:background="@drawable/rounded_corners_red"
+        android:layout_marginTop="20dp"
+        /> <!-- WrongCounter-->
+
+    <TextView
+        style="@style/SmallBox"
+        android:id="@+id/progressCounter"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/game_toolbar"
-        android:textSize="20sp"
-        android:background="@color/Colorerase"
-        android:text="0"
+        android:background="@drawable/rounded_corners_blue"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:gravity="center"
-        android:elevation="5dp"
-        android:textColor="@color/white"/> <!-- WrongCounter-->
+        /> <!-- progressCounter-->
 
     <TextView
         android:id="@+id/EqDisplayBox"

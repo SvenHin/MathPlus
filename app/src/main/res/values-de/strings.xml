@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Math+</string>
+    <string name="app_name">Matte+</string>
     <string name="play_btn">Spill Starten</string>
     <string name="stat_btn">Statistik</string>
     <string name="pref_btn">Einstellungen</string>
@@ -28,7 +28,7 @@
     <string name="gameDoneDialogOk">Beende das Spiel</string>
     <string name="gameComplete">Erledigt!</string>
     <string name="wipeStat">Statistiken löschen</string>
-
-
-
+    <string name="replayDialogOk">Neustart</string>
+    <string name="replayDialogNotOk">Spiel weiter</string>
+    <string name="replayDialog">Möchtest du das Spiel neu starten?</string>
 </resources>

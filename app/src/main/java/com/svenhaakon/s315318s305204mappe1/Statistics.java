@@ -48,13 +48,13 @@ public class Statistics extends Activity {
 
     private void setPercentBackground(TextView v, double percent){
         if (percent > 59){
-            v.setBackgroundColor(getColor(R.color.Color6));
+            v.setBackgroundColor(getColor(R.color.Color7));
         }
         else if (percent < 60 && percent > 19){
-            v.setBackgroundColor(getColor(R.color.colorPrimaryDark));
+            v.setBackgroundColor(getColor(R.color.Color5));
         }
 
-        else v.setBackgroundColor(getColor(R.color.Colorerase));
+        else v.setBackgroundColor(getColor(R.color.Color3));
     }
 
     private void getSharedPreferences(){

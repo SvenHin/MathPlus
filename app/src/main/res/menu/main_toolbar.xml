@@ -5,19 +5,19 @@
 
     <item
         android:id="@+id/playBtn"
-        android:icon="@drawable/baseline_replay_white_18"
+        android:icon="@drawable/baseline_replay_white_36"
         android:title="@string/play_btn"
         android:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/statBtn"
-        android:icon="@drawable/baseline_show_chart_white_18"
+        android:icon="@drawable/baseline_show_chart_white_36"
         android:title="@string/stat_btn"
         android:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/prefBtn"
-        android:icon="@drawable/baseline_settings_white_18"
+        android:icon="@drawable/baseline_settings_white_36"
         android:title="@string/pref_btn"
         android:showAsAction="ifRoom"/>
 
