@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="Toolbar" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:background">@color/colorPrimaryLight</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
         <item name="android:titleTextColor">@color/white</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:layout_width">match_parent</item>
@@ -20,11 +20,7 @@
         <item name="android:textSize">20dp</item>
         <item name="android:gravity">center</item>
     </style>
-    <style name="MainButtons" parent="android:Widget.DeviceDefault.Button">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/colorAccent</item>
-    </style>
+
     <style name="NumberButtons" parent="android:Widget.Material.Light.Button">
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">80dp</item>
@@ -35,11 +31,6 @@
 
     </style>
 
-    <style name="MainButtonsLand" parent="android:Widget.DeviceDefault.Button">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/colorAccent</item>
-    </style>
     <style name="NumberButtonsLand" parent="android:Widget.Material.Light.Button">
         <item name="android:layout_width">75dp</item>
         <item name="android:layout_height">75dp</item>

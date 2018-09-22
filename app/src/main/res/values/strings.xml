@@ -1,12 +1,9 @@
 <resources>
-    <string name="app_name">Matte+</string>
+    <string name="app_name">Math+</string>
     <string name="play_btn">Start spill</string>
     <string name="stat_btn">Statistikk</string>
     <string name="pref_btn">Instillinger</string>
-    <string name="changeLanguage_btn">Språk</string>
-    <string name="cogwheel">Cogwheel</string>
     <string name="pref_title">Innstillinger</string>
-    <string name="game_title">Spill</string>
     <string name="answr_btn">Svar</string>
     <string name="pref_lang_btn">Språk</string>
     <string name="pref_numRounds_btn">Antall spørsmål</string>
@@ -25,18 +22,12 @@
     <string name="bBlank">←</string>
     <string name="lastRunTitle">Sist runde</string>
     <string name="totalTitle">Alle spill</string>
-    <string name="numPoints">%1$d poeng</string>
-    <string name="numWrongs">%1$d feil</string>
-    <string name="progression">%1$d/%2$d spørsmål</string>
     <string name="exitDialogOk">Avslutt</string>
     <string name="exitDialogNotOk">Fortsett å spille!</string>
     <string name="exitDialog">Vil du avslutte spillet?</string>
     <string name="gameDoneDialog">Du har gått gjennom alle regnestykkene, godt jobbet!</string>
     <string name="gameDoneDialogOk">Avslutt spillet</string>
     <string name="gameComplete">Ferdig!</string>
-    <string name="mainCorrectString">Riktige</string>
-    <string name="mainWrongString">Feil</string>
-    <string name="lastRunPercent">%1$d %</string>
     <string name="wipeStat">Tøm statistikk</string>
 
 </resources>

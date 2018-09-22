@@ -1,12 +1,9 @@
 <resources>
-    <string name="app_name">Matte+</string>
+    <string name="app_name">Math+</string>
     <string name="play_btn">Spill Starten</string>
     <string name="stat_btn">Statistik</string>
     <string name="pref_btn">Einstellungen</string>
-    <string name="changeLanguage_btn">Sprache</string>
-    <string name="cogwheel">Coghwhal</string>
     <string name="pref_title">Einstellungen</string>
-    <string name="game_title">Matte+</string>
     <string name="pref_lang_btn">Sprache</string>
     <string name="pref_numRounds_btn">Anzahl der Runden</string>
     <string name="stat_title">Statistik</string>
@@ -20,18 +17,18 @@
     <string name="b7">7</string>
     <string name="b8">8</string>
     <string name="b9">9</string>
-    <string name="gameDoneDialog">Tysk</string>
-    <string name="gameDoneDialogOk">Tysk</string>
-    <string name="gameComplete">Tysk</string>
+    <string name="bSum">=</string>
     <string name="bBlank">←</string>
     <string name="lastRunTitle">Vorherige Runde</string>
     <string name="totalTitle">Alle Spiele</string>
-    <string name="numPoints">%1$d poeng</string>
-    <string name="numWrongs">%1$d feil</string>
-    <string name="progression">%1$d/%2$d spørsmål</string>
-    <string name="exitDialogOk">Avslutt</string>
-    <string name="exitDialogNotOk">Fortsett å spille!</string>
-    <string name="exitDialog">Vil du avslutte spillet?</string>
+    <string name="exitDialogOk">Ausfahrt</string>
+    <string name="exitDialogNotOk">Spiel weiter!</string>
+    <string name="exitDialog">Möchtest du das Spiel beenden?</string>
+    <string name="gameDoneDialog">Du hast alle Berechnungen durchgelaufen, gut gemacht!</string>
+    <string name="gameDoneDialogOk">Beende das Spiel</string>
+    <string name="gameComplete">Erledigt!</string>
+    <string name="wipeStat">Statistiken löschen</string>
+
 
 
 </resources>

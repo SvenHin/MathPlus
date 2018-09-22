@@ -51,10 +51,10 @@ public class Statistics extends Activity {
             v.setBackgroundColor(getColor(R.color.Color6));
         }
         else if (percent < 60 && percent > 19){
-            v.setBackgroundColor(getColor(R.color.blue));
+            v.setBackgroundColor(getColor(R.color.colorPrimaryDark));
         }
 
-        else v.setBackgroundColor(getColor(R.color.red));
+        else v.setBackgroundColor(getColor(R.color.Colorerase));
     }
 
     private void getSharedPreferences(){
