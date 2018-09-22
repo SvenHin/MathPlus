@@ -18,13 +18,26 @@
             android:text="@string/stat_title"/>
     </Toolbar>
 
+    <Button
+        android:id="@+id/wipeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/NumberButtons"
+        android:textSize="15sp"
+        android:text="@string/wipeStat"
+        android:backgroundTint="@color/Color8"
+        android:onClick="wipeStats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stat_toolbar"
+        android:layout_margin="6dp"/>
+
     <View
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:background="@color/white"
         android:layout_margin="10dp"
         android:id="@+id/view1"
-        app:layout_constraintTop_toBottomOf="@id/stat_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/wipeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
@@ -34,7 +47,7 @@
         android:id="@+id/lastRunTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
         android:text="@string/lastRunTitle"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/view1"
@@ -47,7 +60,7 @@
         android:textSize="20sp"
         android:background="@color/Colorok"
         android:text="0"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/lastRunTitle"
@@ -90,7 +103,7 @@
         android:layout_height="0dp"
         android:textSize="40sp"
         android:background="@color/Color6"
-        android:text="70%"
+        android:text="0"
         android:gravity="center"
         app:layout_constraintLeft_toRightOf="@id/lastRunTitle"
         app:layout_constraintTop_toTopOf="@id/view1"
@@ -98,36 +111,84 @@
         app:layout_constraintEnd_toEndOf="@id/view1"
         android:textColor="@color/white"/>
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:id="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
     <TextView
         android:id="@+id/totalTitle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="@string/totalTitle"
-        app:layout_constraintTop_toBottomOf="@id/lastRunPoints"/>
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2" />
 
     <TextView
         android:id="@+id/totalPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:background="@color/Colorok"
+        android:text="0"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/totalTitle"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/view2"
         app:layout_constraintRight_toLeftOf="@id/totalWrongs"
-        android:textColor="@color/forestgreen"/>
+        android:textColor="@color/white"/>
+
     <TextView
         android:id="@+id/totalWrongs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:background="@color/Colorerase"
+        android:text="0"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/totalTitle"
         app:layout_constraintLeft_toRightOf="@id/totalPoints"
         app:layout_constraintRight_toLeftOf="@id/totalQuestions"
-        android:textColor="@color/red"/>
+        android:textColor="@color/white"/>
+
     <TextView
         android:id="@+id/totalQuestions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:background="@color/blue"
+        android:text="0"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/totalTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/totalWrongs"/>
+        app:layout_constraintLeft_toRightOf="@id/totalWrongs"
+        android:textColor="@color/white"/>
 
+    <TextView
+        android:id="@+id/totalPercent"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:textSize="40sp"
+        android:background="@color/Color6"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/totalTitle"
+        app:layout_constraintTop_toTopOf="@id/view2"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="@id/view2"
+        android:textColor="@color/white"/>
 
 </android.support.constraint.ConstraintLayout>

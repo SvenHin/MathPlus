@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Settings"
-    android:background="@color/colorPrimaryLight"
->
+    android:background="@color/colorPrimaryOrange"
+
+    >
     <Toolbar
         style="@style/Toolbar"
         android:id="@+id/settings_toolbar">

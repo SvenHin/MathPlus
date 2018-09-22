@@ -33,8 +33,10 @@
     <string name="exitDialog">Vil du avslutte spillet?</string>
     <string name="gameDoneDialog">Du har gått gjennom alle regnestykkene, godt jobbet!</string>
     <string name="gameDoneDialogOk">Avslutt spillet</string>
-    <string name="gameComplete">Ferdig med runden!</string>
+    <string name="gameComplete">Ferdig!</string>
     <string name="mainCorrectString">Riktige</string>
     <string name="mainWrongString">Feil</string>
+    <string name="lastRunPercent">%1$d %</string>
+    <string name="wipeStat">Tøm statistikk</string>
 
 </resources>

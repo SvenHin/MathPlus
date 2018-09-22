@@ -46,21 +46,13 @@ import static com.svenhaakon.s315318s305204mappe1.R.array.eq_array;
 
 public class Main extends Activity implements ExitDialog.DialogClickListener, GameDoneDialog.DialogClickListener{
 
-    List<String> questionArray;
-    List<String> answerArray;
-    int points;
-    int wrongs;
-    int questionCounter;
-    EditText inputText;
-    TextView textView;
-    int questions;
-    TextView progressText;
-    TextView correctText;
-    TextView wrongText;
-    ProgressBar progressBar;
-    boolean inGame;
-    ArrayList<Integer> indexList;
-    private int currentIndex;
+    private int points, wrongs, questionCounter, questions, currentIndex;
+    private List<String> questionArray, answerArray;
+    private EditText inputText;
+    private TextView textView, correctText, wrongText;
+    private ProgressBar progressBar;
+    private boolean inGame;
+    private ArrayList<Integer> indexList;
 
 
     @Override
@@ -68,12 +60,8 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         super.onResume();
         if(Settings.langChanged){
             Settings.langChanged = false;
-            rec();
+            this.recreate();
         }
-    }
-
-    public void rec(){
-        this.recreate();
     }
 
     @Override
@@ -84,8 +72,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         setActionBar(settingsToolbar);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
-
-        //XML arrays
+        //List from XML arrays
         questionArray =  Arrays.asList(getResources().getStringArray(R.array.eq_array));
         answerArray =  Arrays.asList(getResources().getStringArray(R.array.answr_array));
 
@@ -103,48 +90,19 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         //ProgressBar
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-
-
         //You will not be "in game" before you do an action
         inGame = false;
 
         //Only run initialize when not restoring from another instance
         if(savedInstanceState == null){
+            //Updates language
             if(PreferenceManager.getDefaultSharedPreferences(this).getString("changeLangPref", "").equals("Deutsch")){
                 setLocale("de");
             }
-            //ArrayList of 25 indexes, when all indexes are gone user is asked to exit
+            //ArrayList of 25 indexes, when all indexes are gone app are closed
             indexList = initList(25);
             initialize();
         }
-    }
-
-    private void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-        Settings.langChanged = false;
-        rec();
-    }
-
-    private void initialize(){
-        points = 0;
-        wrongs = 0;
-        questionCounter = 0;
-
-        Collections.shuffle(indexList);
-        questions = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(this).getString("changeNumRoundsPref", ""));
-
-        correctText.setText(String.valueOf(points));
-        wrongText.setText(String.valueOf(wrongs));
-
-        progressBar.setProgress(0);
-        progressBar.setMax(questions);
-
-        showQuestion();
     }
 
     public ArrayList initList(int maxQuestions){
@@ -155,9 +113,26 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         return list;
     }
 
+    private void initialize(){
+        points = 0;
+        wrongs = 0;
+        questionCounter = 0;
+        questions = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(this).getString("changeNumRoundsPref", ""));
+
+        correctText.setText(String.valueOf(points));
+        wrongText.setText(String.valueOf(wrongs));
+
+        progressBar.setProgress(0);
+        progressBar.setMax(questions);
+
+        Collections.shuffle(indexList);
+        showQuestion();
+    }
+
+    /////////////////////////////////// Game Logic Methods ///////////////////////////////////
+
     private void showQuestion(){
         if(indexList.size() != 0){
-            Log.d("showQuestion", String.valueOf(indexList.size()));
             if(questions != questionCounter){
                 currentIndex = indexList.get(0);
                 textView.setText(questionArray.get(currentIndex));
@@ -193,7 +168,6 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         progressBar.incrementProgressBy(1);
         questionCounter++;
         showQuestion();
-
     }
 
     public void saveToSharedPreferences(){
@@ -237,8 +211,6 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         Intent intent = new Intent(Main.this, Settings.class);
         startActivity(intent);
     }
-
-    ///////////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////// Custom keyboard methods /////////////////////////////
 
@@ -360,4 +332,15 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
     }
 
     //////////////////////////////////////////////////////////////////////////////////
+
+    private void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Settings.langChanged = false;
+        this.recreate();
+    }
 }
