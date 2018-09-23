@@ -5,23 +5,26 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/mathlogo"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/mathlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main">
+        <activity
+            android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Statistics">
+        <activity
+            android:name=".Statistics">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"
                     android:parentActivityName=".Main"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Settings">
+        <activity
+            android:name=".Settings">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"
                         android:parentActivityName=".Main"/>

@@ -21,6 +21,12 @@
             android:adjustViewBounds="true"
             android:src="@drawable/mathlogo"
             android:elevation="20dp"/>
+
+        <TextView
+            style="@style/ToolbarTitle"
+            android:text="@string/app_name"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"/>
     </Toolbar> <!-- Toolbar-->
 
     <android.support.constraint.Guideline

@@ -13,14 +13,18 @@
         style="@style/Toolbar"
         app:layout_constraintTop_toTopOf="parent"
         >
+
         <ImageView
             android:id="@+id/toolbarLogo"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
             android:adjustViewBounds="true"
+            android:elevation="40dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/mathlogo"
-            android:elevation="20dp"/>
+            />
+
+
         <TextView
             style="@style/ToolbarTitle"
             android:text="@string/stat_title"/>
