@@ -23,7 +23,7 @@
     <string name="lastRunTitle">Sist runde</string>
     <string name="totalTitle">Alle spill</string>
     <string name="exitDialogOk">Avslutt</string>
-    <string name="exitDialogNotOk">Fortsett å spille!</string>
+    <string name="exitDialogNotOk">Fortsett å spille</string>
     <string name="exitDialog">Vil du avslutte spillet?</string>
     <string name="gameDoneDialog">Du har gått gjennom alle regnestykkene, godt jobbet!</string>
     <string name="gameDoneDialogOk">Avslutt spillet</string>

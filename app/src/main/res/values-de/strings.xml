@@ -22,11 +22,11 @@
     <string name="lastRunTitle">Vorherige Runde</string>
     <string name="totalTitle">Alle Spiele</string>
     <string name="exitDialogOk">Ausfahrt</string>
-    <string name="exitDialogNotOk">Spiel weiter!</string>
+    <string name="exitDialogNotOk">Spiel weiter</string>
     <string name="exitDialog">Möchtest du das Spiel beenden?</string>
     <string name="gameDoneDialog">Du hast alle Berechnungen durchgelaufen, gut gemacht!</string>
     <string name="gameDoneDialogOk">Beende das Spiel</string>
-    <string name="gameComplete">Erledigt!</string>
+    <string name="gameComplete">Fertig!</string>
     <string name="wipeStat">Statistiken löschen</string>
     <string name="replayDialogOk">Neustart</string>
     <string name="replayDialogNotOk">Spiel weiter</string>

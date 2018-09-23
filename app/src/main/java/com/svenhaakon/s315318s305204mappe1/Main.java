@@ -51,7 +51,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
     private EditText inputText;
     private TextView textView, correctText, wrongText, progressText;
     private ProgressBar progressBar;
-    private boolean inGame;
+    private boolean inGame, gameDone;
     private ArrayList<Integer> indexList;
 
 
@@ -127,6 +127,9 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         //You will not be "in game" before you do an action
         inGame = false;
 
+        //Turns true when all questions are answered
+        gameDone = false;
+
         //Init progressbar
         progressBar.setProgress(0);
         progressBar.setMax(questions);
@@ -159,6 +162,8 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
             else {
                 textView.setText(getText(R.string.gameComplete));
                 saveToSharedPreferences();
+                inGame = false;
+                gameDone = true;
                 return;
             }
         }
@@ -180,13 +185,15 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
     }
 
     public void nextQuestion(View v){
-        if(!inGame) inGame = true;
-        checkAns();
-        indexList.remove(0);
-        inputText.setText("");
-        progressBar.incrementProgressBy(1);
-        questionCounter++;
-        printQuestion();
+        if(!gameDone) {
+            if(!inGame) inGame = true;
+            checkAns();
+            indexList.remove(0);
+            inputText.setText("");
+            progressBar.incrementProgressBy(1);
+            questionCounter++;
+            printQuestion();
+        }
     }
 
     public void saveToSharedPreferences(){
@@ -349,6 +356,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         outState.putInt("currentIndex", currentIndex);
         outState.putIntegerArrayList("indexList", indexList);
         outState.putBoolean("inGame", inGame);
+        outState.putBoolean("gameDone", gameDone);
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState){
@@ -364,6 +372,7 @@ public class Main extends Activity implements ExitDialog.DialogClickListener, Ga
         currentIndex = savedInstanceState.getInt("currentIndex");
         indexList = savedInstanceState.getIntegerArrayList("indexList");
         inGame = savedInstanceState.getBoolean("inGame");
+        gameDone = savedInstanceState.getBoolean("gameDone");
         printValues();
 
     }
